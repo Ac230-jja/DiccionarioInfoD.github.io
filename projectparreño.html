@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosario Técnico Educativo: Herramientas para el Conocimiento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+            --text-color: #34495e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .search-container {
+            margin: 2rem auto;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 1rem 3rem 1rem 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        .subject-entry {
+            background: white;
+            margin: 2rem;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .subject-entry:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: block;
+        }
+
+        .definition {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-left: 4px solid var(--secondary-color);
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 0 10px 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .definition:hover {
+            background: rgba(52, 152, 219, 0.2);
+            transform: translateX(10px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .subject-entry {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 1rem;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Glosario Técnico Educativo: Herramientas para el Conocimiento</h1>
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchInput" placeholder="Buscar definiciones...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+    </div>
+
+    <div class="subject-entry">
+        <h2>Lenguaje</h2>
+        <div class="definition">Acento: Énfasis en una sílaba o palabra.</div>
+        <div class="definition">Adjetivo: Palabra que describe o modifica un sustantivo.</div>
+        <div class="definition">Adverbio: Palabra que modifica un verbo, adjetivo u otro adverbio.</div>
+        <div class="definition">Antónimo: Palabra con significado opuesto a otra.</div>
+        <div class="definition">Conjunción: Palabra que une palabras, frases o cláusulas.</div>
+        <div class="definition">Diptongo: Combinación de dos vocales en una sílaba.</div>
+        <div class="definition">Gramática: Reglas y estructura del lenguaje.</div>
+        <div class="definition">Metáfora: Comparación implícita entre dos cosas diferentes.</div>
+        <div class="definition">Oración: Unidad básica de significado en el lenguaje.</div>
+        <div class="definition">Pronombre: Palabra que reemplaza a un sustantivo.</div>
+        <div class="definition">Sílaba: Unidad de sonido en una palabra.</div>
+        <div class="definition">Sinónimo: Palabra con significado similar a otra.</div>
+        <div class="definition">Sustantivo: Palabra que nombra a una persona, lugar, cosa o idea.</div>
+        <div class="definition">Verbo: Palabra que expresa una acción o estado.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Matemáticas</h2>
+        <div class="definition">Álgebra: Rama que usa símbolos para representar números y cantidades.</div>
+        <div class="definition">Ángulo: Figura formada por dos líneas que se encuentran en un punto.</div>
+        <div class="definition">Área: Espacio dentro de un límite cerrado en dos dimensiones.</div>
+        <div class="definition">Círculo: Figura plana cuyos puntos están a igual distancia del centro.</div>
+        <div class="definition">Ecuación: Afirmación matemática que dos expresiones son iguales.</div>
+        <div class="definition">Estadística: Recolección, análisis e interpretación de datos numéricos.</div>
+        <div class="definition">Fracción: Parte de un todo, representada por un numerador y denominador.</div>
+        <div class="definition">Geometría: Estudio de formas, tamaños y posiciones de figuras.</div>
+        <div class="definition">Integral: Concepto en cálculo para encontrar áreas y volúmenes.</div>
+        <div class="definition">Logaritmo: Exponente al que se eleva una base para obtener un número.</div>
+        <div class="definition">Probabilidad: Posibilidad de que ocurra un evento.</div>
+        <div class="definition">Trigonometría: Estudio de relaciones entre lados y ángulos de triángulos.</div>
+        <div class="definition">Variable: Símbolo que representa un valor desconocido.</div>
+        <div class="definition">Vector: Cantidad con magnitud y dirección.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Fomentación Derecho Laboral</h2>
+        <div class="definition">Accidente de trabajo: Suceso ocurrido durante el trabajo que puede causar daño físico o psicológico al trabajador.</div>
+        <div class="definition">Comisiones calificadoras de riesgo: Organismos que evalúan y clasifican los riesgos laborales para determinar la posibilidad de accidentes o enfermedades laborales.</div>
+        <div class="definition">Contrato de trabajo: Acuerdo entre empleador y empleado que establece las condiciones de trabajo.</div>
+        <div class="definition">Contaminantes químicos y biológicos: Sustancias que afectan la salud humana y el medio ambiente.</div>
+        <div class="definition">Derecho laboral: Rama del derecho que regula las relaciones entre empleadores y trabajadores, protegiendo derechos y estableciendo obligaciones.</div>
+        <div class="definition">Equipo de protección: Elementos necesarios para prevenir accidentes y lesiones en el trabajo.</div>
+        <div class="definition">Factores de riesgo: Condiciones que incrementan la probabilidad de accidentes o enfermedades laborales.</div>
+        <div class="definition">Factores físicos: Elementos ambientales en el trabajo que impactan la salud.</div>
+        <div class="definition">Fuentes de derecho: Instrumentos que contienen normas y principios reguladores.</div>
+        <div class="definition">Incapacidad temporal: Estado en el cual una persona no puede realizar sus actividades laborales debido a una enfermedad o lesión.</div>
+        <div class="definition">La ley: Conjunto de normas que ordenan la conducta en una sociedad.</div>
+        <div class="definition">Microclima: Condiciones climáticas específicas de un área pequeña.</div>
+        <div class="definition">Prevención contra incendios: Medidas para evitar incendios y reducir daños.</div>
+        <div class="definition">Primeros auxilios: Acciones inmediatas para atender emergencias o accidentes.</div>
+        <div class="definition">Riesgo laboral: Posibilidad de que un trabajador sufra un accidente relacionado con su trabajo.</div>
+        <div class="definition">Salud laboral: Rama de la salud pública que protege la salud de los trabajadores.</div>
+        <div class="definition">Señalización de seguridad: Elementos visuales que previenen accidentes.</div>
+        <div class="definition">Seguridad de riesgo de trabajo: Obligación del empleador de cubrir indemnización por riesgos laborales.</div>
+        <div class="definition">Sobrecargas físicas y posturas: Factores relacionados con cargas físicas y posturas inadecuadas.</div>
+        <div class="definition">Técnicas de protección: Métodos usados para prevenir o mitigar riesgos y peligros en distintas situaciones.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Aplicaciones ofimáticas</h2>
+        <div class="definition">Agendas: Herramienta versátil que permite a particulares y empresas gestionar sus agendas a la perfección.</div>
+        <div class="definition">Antivirus: Programa que detecta la presencia de virus y puede neutralizar sus efectos.</div>
+        <div class="definition">Buzón: Depósito que almacena mensajes de correo electrónico recibidos por un usuario.</div>
+        <div class="definition">Cache: Almacenamiento de alta velocidad que guarda datos temporales.</div>
+        <div class="definition">Código: Conjunto de instrucciones que un computador ejecuta.</div>
+        <div class="definition">Conectar: Acción de interconectar ordenadores en una red.</div>
+        <div class="definition">Contraseña: Conjunto de caracteres para acceder a información reservada en un sistema, servicio o sitio web.</div>
+        <div class="definition">Correo: Servicio en línea para enviar mensajes a través de una red a múltiples destinatarios.</div>
+        <div class="definition">Digital: Información presentada o transportada mediante la combinación de bits.</div>
+        <div class="definition">Escáner: Periférico que digitaliza imágenes impresas mediante luz.</div>
+        <div class="definition">Hipervínculo: Enlace en un documento electrónico que hace referencia a otros recursos.</div>
+        <div class="definition">Impresora: Periférico que imprime información resultante del procesamiento de datos.</div>
+        <div class="definition">Instalar: Proceso de transferir y configurar nuevos programas para su uso.</div>
+        <div class="definition">Portapapeles: Área de almacenamiento temporal que permite pegar elementos en otros archivos.</div>
+        <div class="definition">Portátil: Computador personal que se puede transportar fácilmente.</div>
+        <div class="definition">Privacidad: Protección de datos personales contra accesos no autorizados.</div>
+        <div class="definition">Procesamiento: Acumulación y manipulación de datos para producir información significativa.</div>
+        <div class="definition">Router: Dispositivo que conecta dos o más redes o subredes de conmutación de paquetes.</div>
+        <div class="definition">Tarjeta madre: Componente principal de un computador donde se conectan todos los dispositivos internos.</div>
+        <div class="definition">Teclado: Dispositivo para introducir datos en un computador.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Sistemas Operativos</h2>
+        <div class="definition">API: Conjunto de funciones y herramientas que el sistema operativo proporciona para que las aplicaciones interactúen con el hardware y software del sistema.</div>
+        <div class="definition">Bootloader: Programa que carga el sistema operativo en memoria al arrancar la computadora.</div>
+        <div class="definition">Caching: Técnica de almacenamiento temporal de datos de acceso frecuente para acelerar el rendimiento del sistema.</div>
+        <div class="definition">Deadlock (Interbloqueo): Situación en la que dos o más procesos se bloquean mutuamente esperando recursos en posesión del otro, paralizando el sistema.</div>
+        <div class="definition">DLL: Biblioteca de vínculos dinámicos que permite a varios programas compartir funciones comunes en sistemas como Windows.</div>
+        <div class="definition">Hilos: Subdivisiones de un proceso que permiten ejecutar tareas concurrentes en paralelo.</div>
+        <div class="definition">Inodo: Estructura de datos que almacena información de un archivo, excepto su nombre y contenido.</div>
+        <div class="definition">Interrupción: Señal que interrumpe el flujo normal del procesador para atender una tarea urgente.</div>
+        <div class="definition">Kernel: Núcleo del sistema operativo que gestiona la comunicación entre hardware y software y administra los recursos del sistema.</div>
+        <div class="definition">Memoria Virtual: Técnica que permite al sistema operativo usar el disco como memoria adicional, facilitando la ejecución de programas grandes.</div>
+        <div class="definition">Multitarea: Capacidad del sistema operativo para ejecutar varios procesos a la vez, optimizando el uso de recursos.</div>
+        <div class="definition">Permisos de Usuario: Niveles de acceso que determinan las acciones permitidas para usuarios y procesos en el sistema.</div>
+        <div class="definition">Planificación de Procesos: Algoritmo que determina el orden de ejecución de procesos para optimizar el rendimiento.</div>
+        <div class="definition">Procesos: Programas en ejecución que el sistema operativo gestiona para realizar múltiples tareas simultáneamente.</div>
+        <div class="definition">Redundancia: Duplicación o triplicación de componentes críticos del sistema para aumentar la disponibilidad y evitar fallos.</div>
+        <div class="definition">Semaphore: Mecanismo de sincronización para gestionar el acceso de múltiples procesos a recursos compartidos.</div>
+        <div class="definition">Shell: Interfaz de línea de comandos que permite al usuario interactuar con el sistema operativo a través de comandos.</div>
+        <div class="definition">Sistema de Archivos: Estructura y método que usa el sistema operativo para organizar, almacenar y gestionar archivos.</div>
+        <div class="definition">Sistema Distribuido: Conjunto de computadoras conectadas que funcionan como un solo sistema, compartiendo recursos y tareas.</div>
+        <div class="definition">Swap: Espacio en disco que actúa como memoria adicional cuando la RAM se llena, aunque es más lento.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Historia</h2>
+        <div class="definition">Capitalismo: Sistema económico basado en la propiedad privada y el libre mercado.</div>
+        <div class="definition">Civilización: Conjunto de sociedades organizadas que comparten cultura, lengua y sistemas políticos.</div>
+        <div class="definition">Colonialismo: Práctica de control y explotación de un territorio por una potencia extranjera.</div>
+        <div class="definition">Crítica: Análisis y evaluación de ideas, eventos o movimientos históricos.</div>
+        <div class="definition">Cultura: Conjunto de costumbres, tradiciones, lenguas y creencias de un grupo social.</div>
+        <div class="definition">Diplomacia: Manejo de relaciones internacionales a través de negociaciones y acuerdos.</div>
+        <div class="definition">Feudalismo: Sistema social y económico medieval basado en la propiedad de la tierra y lealtades personales.</div>
+        <div class="definition">Globalización: Proceso de interconexión económica, cultural y política a nivel mundial.</div>
+        <div class="definition">Guerra: Conflicto armado entre diferentes grupos o naciones por recursos, territorio o ideologías.</div>
+        <div class="definition">Herencia: Conjunto de legados culturales, sociales y políticos que se transmiten de generación en generación.</div>
+        <div class="definition">Imperio: Extensa organización política que ejerce control sobre múltiples territorios y pueblos.</div>
+        <div class="definition">Independencia : Proceso por el cual una nación se libera del control de otra.</div>
+        <div class="definition">Innovación: Introducción de nuevas ideas o métodos que transforman sociedades.</div>
+        <div class="definition">Monarquía: Forma de gobierno donde el poder es ejercido por un rey o reina.</div>
+        <div class="definition">Nacionalismo: Ideología que promueve la identidad y unidad de una nación por encima de otras.</div>
+        <div class="definition">Propaganda: Difusión de información para influir en la opinión pública o promover ideologías.</div>
+        <div class="definition">Renacimiento: Movimiento cultural europeo del siglo XV al XVI que buscó revitalizar la cultura clásica y promover el humanismo.</div>
+        <div class="definition">Revolución: Cambio radical en la estructura política, social o económica de un país.</div>
+        <div class="definition">Soberanía: Autoridad suprema de un estado para gobernarse a sí mismo sin interferencias externas.</div>
+        <div class="definition">Totalitarismo: Sistema político en el que el estado tiene control absoluto sobre todos los aspectos de la vida pública y privada.</div>
+        <div class="definition">Tradición: Conjunto de costumbres, creencias y prácticas que se transmiten de generación en generación.</div>
+        <div class="definition">Utopía: Idea o proyecto de una sociedad ideal y perfecta que no se ha concretado en la realidad.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Química</h2>
+        <div class="definition">Ácido: Sustancia química que puede donar protones; también se refiere a algo corrosivo o crítico.</div>
+        <div class="definition">Base: En química, sustancia que acepta protones; en otros contextos, es el fundamento de algo.</div>
+        <div class="definition">Catálisis: Proceso de acelerar una reacción química; también puede significar el impulso de un cambio.</div>
+        <div class="definition">Catión: Ion con carga positiva; se utiliza en términos técnicos para identificar cargas en otros sistemas.</div>
+        <div class="definition">Compuesto: En química, una sustancia de dos o más elementos; en general, cualquier cosa hecha de varias partes.</div>
+        <div class="definition">Concentración: Medida de la cantidad de soluto en una solución; en general, significa atención intensa.</div>
+        <div class="definition">Cristalización: Formación de cristales a partir de una solución; en lenguaje figurado, algo que se define claramente.</div>
+        <div class="definition">Densidad: Masa por unidad de volumen; también se usa para hablar de la cantidad de personas o cosas en un área.</div>
+        <div class="definition">Disolución: Proceso de mezclar una sustancia en otra; también puede significar la desaparición de algo.</div>
+        <div class="definition">Elemento: En química, sustancia pura; en otros contextos, se refiere a componentes de un conjunto.</div>
+        <div class="definition">Energía: Capacidad para realizar trabajo en química y física; en general, se refiere al vigor o fuerza.</div>
+        <div class="definition">Enlace: Unión de átomos en química; también significa una conexión o vínculo.</div>
+        <div class="definition">Equilibrio: Estado de balance en reacciones químicas; en otros ámbitos, se refiere a la estabilidad.</div>
+        <div class="definition">Estado: Condición física de una sustancia (sólido, líquido, gas); también puede significar la situación o condición en general.</div>
+        <div class="definition">Fase: Estado físico en el que se encuentra una sustancia; también puede referirse a una etapa de un proceso.</div>
+        <div class="definition">Ionización: Proceso de creación de iones; también se usa en tecnología para referirse a ciertas cargas.</div>
+        <div class="definition">Molécula: Grupo de átomos unidos; en otros campos, representa una pequeña parte de algo.</div>
+        <div class="definition">Neutralización: Reacción para equilibrar á cido y base; en general, es la eliminación de un efecto.</div>
+        <div class="definition">Núcleo: Parte central de un átomo; también se usa para describir la parte esencial de algo.</div>
+        <div class="definition">Reacción: Respuesta química a otros compuestos; en otros contextos, cualquier respuesta ante un estímulo.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Diseño Web</h2>
+        <div class="definition">Apache HTTPd: Servidor Web libre. Dicho servidor es altamente flexible y actualmente el 60% de los sitios web funcionan con Apache.</div>
+        <div class="definition">CSS: (Cascading Style Sheets) Hojas de Estilo en Cascada. Permiten generar clases de estilo que se pueden aplicar a etiquetas HTML. Dichas hojas de estilo se pueden definir dentro de los ficheros HTML o referenciarlos. Las clases de estilo luego se asociarán a etiquetas HTML. También es un estándar de la W3C.</div>
+        <div class="definition">Dirección IP: Identificativo único de una interfaz de red basado en el Protocolo IP. Normalmente asociada a un nombre de dominio. Necesaria para crear una conexión Socket/IP.</div>
+        <div class="definition">Dominio: Nombre registrado y asociado a una compañía que permite asociar nombres de servidores con direcciones IP. Normalmente se alquila de manera anual. No puede haber dos propietarios a la vez de un mismo dominio.</div>
+        <div class="definition">EcmaScript: Estándar de JavaScript. Para que los navegadores implementen el mismo lenguaje JavaScript.</div>
+        <div class="definition">Extensión o Plugin Web: Extensión de un navegador web que permite añadir funcionalidad a un navegador web, por ejemplo, la visualización de elementos no estándar. Ejemplos: Flash Player, JVM, etc.</div>
+        <div class="definition">HTML: Hyper Text Markup Language. Lenguaje que permite definir el contenido para que el cliente web visualice la información que contiene. Permite la inclusión de medios (gráficos, sonidos, vídeos, etc.) y es un estándar de la web definido por la W3C.</div>
+        <div class="definition">Etiqueta o TAG: Unidad mínima de representación en el lenguaje HTML. Permite definir párrafos, tablas, enlaces, imágenes, etc.</div>
+        <div class="definition">JavaScript (JS): Lenguaje de programación orientado a objetos y eventos que permite en la parte cliente procesar y realizar cambios en la presentación dentro del navegador. Dichos scripts suelen estar referenciados desde el fichero HTML.</div>
+        <div class="definition">Métodos HTTP: Verbos que identifican el tipo de petición HTTP que se quiere realizar.</div>
+        <div class="definition">Método GET: Tipo de petición que solicita información al servidor web. También permite pasar parámetros por la URL, pero de manera visible, no como POST.</div>
+        <div class="definition">Método POST: Tipo de petición que permite enviar datos al servidor de manera transparente. Forma de paso de parámetros mediante formulario (normalmente).</div>
+        <div class="definition">Navegador Web: Cliente que permite consultar a servidores web y presentar la información HTML. Ejemplos: Firefox, Konqueror, Opera, Internet Explorer, etc.</div>
+        <div class="definition">Nginx: Servidor web libre. Dicho servidor es mucho más rápido que el servidor de Apache, pero dispone de menos funcionalidades.</div>
+        <div class="definition">Página Web: Unidad de contenido mínima de un servidor web. Normalmente está compuesta de un fichero formateado en HTML y sus referencias.</div>
+        <div class="definition">PHP: PHP Hypertext Pre-processor. Lenguaje de programación creado por Rasmus Lerdorf, usado generalmente para la creación de contenido para sitios web. PHP está preparado para funcionar como un módulo de Apache HTTPd (y otros servidores web).</div>
+        <div class="definition">Puerto IP: Número identificativo de una puerta abierta en un servidor, 80 en el caso de HTTP, 443 en el caso de HTTPS.</div>
+        <div class="definition">Recurso: Cualquier elemento que se puede acceder a través de una URL, como una página web, una imagen o un archivo.</div >
+        <div class="definition">Servicio DNS: Servidor que, entre otras funciones, permite traducir nombres de máquinas en Internet a direcciones IP.</div>
+        <div class="definition">Sitio Web: Conjunto de reglas del servidor web y las páginas web que lo componen.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Biología</h2>
+        <div class="definition">Adaptación: Característica que mejora la capacidad de un organismo para sobrevivir en su entorno.</div>
+        <div class="definition">ADN (Ácido desoxirribonucleico): Molécula que contiene la información genética de un organismo.</div>
+        <div class="definition">Bacteria: Microorganismo unicelular, algunos de los cuales pueden causar enfermedades.</div>
+        <div class="definition">Biodiversidad: Variedad de organismos en un área, ecosistema o en el planeta.</div>
+        <div class="definition">Célula: Unidad básica de la vida, presente en todos los seres vivos.</div>
+        <div class="definition">Clorofila: Pigmento verde en las plantas esencial para la fotosíntesis.</div>
+        <div class="definition">Ecología: Estudio de las interacciones entre organismos y su entorno.</div>
+        <div class="definition">Ecosistema: Conjunto de organismos y su entorno que interactúan en un área determinada.</div>
+        <div class="definition">Especie: Grupo de organismos que pueden reproducirse entre sí y producir descendencia fértil.</div>
+        <div class="definition">Evolución: Proceso de cambio gradual en las especies a lo largo del tiempo.</div>
+        <div class="definition">Fotosíntesis: Proceso en el cual las plantas convierten la luz solar en energía.</div>
+        <div class="definition">Gen: Segmento de ADN que determina una característica específica hereditaria.</div>
+        <div class="definition">Homeostasis: Capacidad de un organismo para mantener condiciones internas estables.</div>
+        <div class="definition">Metabolismo: Conjunto de reacciones químicas que mantienen la vida en un organismo.</div>
+        <div class="definition">Mutación: Cambio en el ADN de un organismo que puede alterar una característica.</div>
+        <div class="definition">Nutriente: Sustancia necesaria para el crecimiento y el mantenimiento de la vida.</div>
+        <div class="definition">Órgano: Estructura compuesta de tejidos que realizan una función específica en el cuerpo.</div>
+        <div class="definition">Taxonomía: Ciencia de clasificar y nombrar los organismos en grupos basados en características compartidas.</div>
+        <div class="definition">Tejido: Conjunto de células similares que realizan una función específica en el organismo.</div>
+        <div class="definition">Virus: Agente infeccioso que necesita células vivas para reproducirse.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Emprendimiento</h2>
+        <div class="definition">Aceleradora: Programa que ayuda a startups a crecer rápidamente mediante recursos, mentoría y financiamiento.</div>
+        <div class="definition">Análisis FODA: Evaluación de Fortalezas, Oportunidades, Debilidades y Amenazas de un negocio.</div>
+        <div class="definition">Bootstrapping: Financiamiento de un negocio con recursos propios, sin depender de inversionistas externos.</div>
+        <div class="definition">Capital semilla: Fondos iniciales para iniciar un negocio, generalmente provistos por inversores, familia o amigos.</div>
+        <div class="definition">Customer journey: Trayectoria del cliente desde que conoce la marca hasta que realiza la compra.</div>
+        <div class="definition">Emprendimiento: Proceso de crear un negocio u organización para satisfacer una necesidad o aprovechar una oportunidad en el mercado.</div>
+        <div class="definition">Escalabilidad: Capacidad de un negocio de crecer y aumentar ingresos sin un incremento proporcional en costos.</div>
+        <div class="definition">Incubadora: Organización que apoya a startups en sus etapas iniciales con recursos, mentoría y redes de contacto.</div>
+        <div class="definition">Innovación : Implementación de ideas nuevas o mejoradas para resolver problemas o crear productos únicos en el mercado.</div>
+        <div class="definition">Inversión: Aporte de capital para impulsar un negocio, esperando obtener beneficios futuros.</div>
+        <div class="definition">Marketing digital: Uso de canales digitales para promocionar y vender productos o servicios.</div>
+        <div class="definition">Mentoría: Guía de un experto hacia emprendedores para ayudarlos a crecer y superar retos.</div>
+        <div class="definition">Modelo de negocio: Estrategia que define cómo una empresa genera ingresos y añade valor a sus clientes.</div>
+        <div class="definition">Mercado objetivo: Grupo específico de consumidores a los que se dirige un producto o servicio.</div>
+        <div class="definition">Pitch: Presentación breve que comunica la esencia de un negocio o proyecto para captar interés de inversores.</div>
+        <div class="definition">Plan de negocios: Documento que detalla los objetivos, estrategias y proyecciones de una empresa.</div>
+        <div class="definition">Redes de contacto: Proceso de crear y mantener contactos profesionales que puedan beneficiar el negocio.</div>
+        <div class="definition">Startup: Empresa emergente, usualmente tecnológica, en etapa inicial con alto potencial de crecimiento.</div>
+        <div class="definition">Propuesta de valor: Promesa de beneficios únicos que un producto o servicio ofrece a los clientes.</div>
+        <div class="definition">Flujo de caja: Movimiento de dinero dentro y fuera de un negocio, esencial para medir liquidez.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Educación Física</h2>
+        <div class="definition">Agilidad: Capacidad para cambiar de dirección con rapidez.</div>
+        <div class="definition">Calentamiento: Preparación física antes de una actividad intensa.</div>
+        <div class="definition">Coordinación: Armonía entre movimientos y acciones.</div>
+        <div class="definition">Deporte: Actividad física organizada con reglas y objetivos.</div>
+        <div class="definition">Entrenamiento: Proceso sistemático para mejorar habilidades y rendimiento.</div>
+        <div class="definition">Equilibrio: Capacidad para mantener la estabilidad.</div>
+        <div class="definition">Estiramiento: Ejercicios para mejorar la flexibilidad y evitar lesiones.</div>
+        <div class="definition">Flexibilidad: Capacidad para moverse con amplitud y precisión.</div>
+        <div class="definition">Fuerza: Capacidad para superar resistencias o realizar esfuerzos.</div>
+        <div class="definition">Gimnasia: Ejercicios que mejoran la flexibilidad y fuerza.</div>
+        <div class="definition">Lesión: Daño físico que afecta la salud y rendimiento.</div>
+        <div class="definition">Motricidad: Desarrollo de habilidades motoras básicas.</div>
+        <div class="definition">Orientación: Guía y dirección en actividades físicas.</div>
+        <div class="definition">Postura: Posición correcta del cuerpo para evitar lesiones.</div>
+        <div class="definition">Recreación: Actividades físicas para disfrutar y relajarse.</div>
+        <div class="definition">Resistencia: Capacidad para soportar esfuerzos prolongados.</div>
+        <div class="definition">Rendimiento: Nivel de logro en una actividad física.</div>
+        <div class="definition">Salud: Estado de bienestar físico, mental y social.</div>
+        <div class="definition">Técnica: Método específico para realizar una habilidad.</div>
+    </div>
+    
+    <div class="subject-entry">
+        <h2>Física</h2>
+        <div class="definition">Aceleración: Cambio de velocidad de un objeto por unidad de tiempo.</div>
+        <div class="definition">Amplitud: Máxima distancia desde la posición de equilibrio en un movimiento oscilatorio.</div>
+        <div class="definition">Campo: Región del espacio donde se ejercen fuerzas sobre partículas.</div>
+        <div class="definition">Cinetismo: Estudio del movimiento de los cuerpos.</div>
+        <div class="definition">Dinámica: Rama de la física que estudia las fuerzas y sus efectos en el movimiento.</div>
+        <div class="definition">Electromagnetismo: Rama de la física que estudia las interacciones entre cargas eléctricas y campos magnéticos.</div>
+        <div class="definition">Energía: Capacidad para realizar trabajo; puede presentarse en diversas formas.</div>
+        <div class="definition">Fuerza: Interacción que puede cambiar el estado de movimiento de un objeto.</div>
+        <div class="definition">Gravitación: Fuerza de atracción que actúa entre dos cuerpos con masa.</div>
+        <div class="definition">Hertz: Unidad de frecuencia que mide el número de ciclos por segundo.</div>
+        <div class="definition">Inercia: Tendencia de un objeto a mantener su estado de reposo o movimiento.</div>
+        <div class="definition">Kinemática: Parte de la física que describe el movimiento sin considerar sus causas.</div>
+        <div class="definition">Momento: Producto de la masa de un cuerpo por su velocidad; también se refiere al momento de fuerza.</div>
+        <div class="definition">Oscilación: Movimiento repetitivo de un objeto en torno a una posición de equilibrio.</div>
+        <div class="definition">Potencia: Tasa a la que se realiza trabajo o se transfiere energía.</div>
+        <div class="definition">Radiación: Emisión y propagación de energía en forma de ondas o partículas.</div>
+        <div class="definition">Termodinámica: Rama de la física que estudia las relaciones entre calor, trabajo y energía.</div>
+    </div>
+    
+<button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+</button>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        const definitions = document.getElementsByClassName('definition');
+        const subjectEntries = document.getElementsByClassName('subject-entry');
+    
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+    
+            if (searchTerm === '') {
+                Array.from(definitions).forEach(def => {
+                    def.style.display = 'block';
+                    def.style.backgroundColor = '';
+                });
+                Array.from(subjectEntries).forEach(entry => {
+                    entry.style.display = 'block';
+                });
+                return;
+            }
+    
+            Array.from(definitions).forEach(def => {
+                const text = def.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    def.style.display = 'block';
+                    def.style.backgroundColor = 'rgba(255, 243, 205, 0.5)';
+                    def.closest('.subject-entry').style.display = 'block';
+                } else {
+                    def.style.display = 'none';
+                    def.style.backgroundColor = '';
+                }
+            });
+    
+            Array.from(subjectEntries).forEach(entry => {
+                const visibleDefs = entry.querySelectorAll('.definition[style="display: block"]');
+                entry.style.display = visibleDefs.length > 0 ? 'block' : 'none';
+            });
+        });
+    
+        const themeToggle = document.getElementById('themeToggle');
+        let darkMode = localStorage.getItem('darkMode') === 'true';
+    
+        function updateTheme() {
+            if (darkMode) {
+                document.documentElement.style.setProperty('--background-color', '#2c3e50');
+                document.documentElement.style.setProperty('--text-color', '#ecf0f1');
+                document.documentElement.style.setProperty('--primary-color', '#34495e');
+                document.documentElement.style.setProperty('--secondary-color', '#3498db');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                document.documentElement.style.setProperty('--background-color', '#ecf0f1');
+                document.documentElement.style.setProperty('--text-color', '#34495e');
+                document.documentElement.style.setProperty('--primary-color', '#2c3e50');
+                document.documentElement.style.setProperty('--secondary-color', '#3498db');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        }
+    
+        updateTheme();
+    
+        themeToggle.addEventListener('click', function() {
+            darkMode = !darkMode;
+            localStorage.setItem('darkMode', darkMode);
+            updateTheme();
+        });
+    
+        Array.from(definitions).forEach(def => {
+            def.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(10px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+    
+            def.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+    
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
